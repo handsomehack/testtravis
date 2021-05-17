@@ -10,9 +10,9 @@ branches:
 #the generated documentation.
 env:
   global:
-    - GH_REPO_NAME: 2020_GROUP_6
+    - GH_REPO_NAME: testtravis
     - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
-    - GH_REPO_REF: github.com/MaxBarber/2020_GROUP_6.git
+    - GH_REPO_REF: github.com/handsomehack/testtravis.git
     
     
 language:
