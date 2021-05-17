@@ -1,0 +1,62 @@
+# .travis.yml
+dist: trusty
+sudo: required
+branches:
+  except:
+    - gh-pages
+
+
+#tell Doxygen where to find the source on and where to send
+#the generated documentation.
+env:
+  global:
+    - GH_REPO_NAME: 2020_GROUP_6
+    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
+    - GH_REPO_REF: github.com/MaxBarber/2020_GROUP_6.git
+    
+    
+language:
+  - cpp
+compiler:
+  - gcc
+    
+#Have Doxygen installed on the virtual machine 
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - doxygen
+      - graphviz
+      - gcc-6
+      - g++-6
+      - cmake
+      
+      
+     
+
+
+      
+#Define the script that Travis will run every time code is submitted
+#to the repository.
+script:
+  # Link gcc-6 and g++-6 to their standard commands
+  - sudo ln -s /usr/bin/gcc-6 /usr/local/bin/gcc
+  - sudo ln -s /usr/bin/g++-6 /usr/local/bin/g++
+  # Export CC and CXX to tell cmake which compiler to use
+  - export CC=/usr/bin/gcc-6
+  - export CXX=/usr/bin/g++-6
+  # Check versions of gcc, g++ and cmake
+  - gcc -v && g++ -v && cmake --version
+  # Run your build commands next
+  - cmake .
+  - make
+  - make test
+
+
+
+# Generate and deploy documentation
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - chmod +x generateDocumentationAndDeploy.sh
+  - ./generateDocumentationAndDeploy.sh

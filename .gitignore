@@ -1,0 +1,17 @@
+#file ignore 
+*.exe
+*.o
+*.a
+*.lib
+*.dll
+
+
+#folder ignore 
+build/
+.vscode/
+glew/
+glfw/
+.vs/
+.out/
+cmake-build-debug/
+.idea/

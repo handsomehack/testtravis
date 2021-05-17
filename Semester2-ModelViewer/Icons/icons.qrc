@@ -1,0 +1,40 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/Icons">
+    <!-- Typical file operations. -->
+    <file>fileopen.png</file>
+    <file>logout.png</file>
+    <file>filesave.png</file>
+    <file>terrain.png</file>
+    <file>pqAxes.png</file>
+     <file>pqCalculator.svg</file>
+    <file>pqEyeball.svg</file>
+    <file>pqPalette.svg</file> 
+    <file>pqRedoCamera.svg</file> 
+    <file>pqRotateCameraCCW.svg</file>
+    <file>pqRotateCameraCW.svg</file>
+    <file>pqSlice24.png</file>
+    <file>pqXMinus.svg</file>
+    <file>pqXPlus.svg</file>
+   <file>pqYMinus.svg</file>
+   <file>pqYPlus.svg</file>
+   <file>pqZMinus.svg</file>
+   <file>pqZPlus.svg</file> 
+   <file>arrow.png</file> 
+   <file>santa.png</file>
+ <file>cone.png</file>
+ <file>cube.png</file>
+ <file>cylinder.png</file>
+ <file>disk.png</file>
+ <file>line.png</file>
+ <file>sphere.png</file>
+ <file>tetrahedron.png</file>
+ <file>pyramid.png</file>
+<file>arc.png</file>
+<file>48.png</file>
+
+
+    <!-- Help -->
+    <file>help.png</file>
+  </qresource>
+</RCC>
