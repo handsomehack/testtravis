@@ -3,6 +3,10 @@
 #include <vector3d.h>
 #include "cell.h"
 
+
+/// This is a brief description for this class
+/// Hello World
+/// This is detailed description
 class Hexahedron : public Cell {
 	//inherit properties from cell class
 
@@ -35,11 +39,22 @@ public:
 	
     Hexahedron& operator=(const Hexahedron &h);// overloading the = operator 
 
-	virtual~Hexahedron(); //destrucotr
+	virtual~Hexahedron(); //destructor
 
     // re-implement the virtual functions in the sub-class
+
+	/// Brief desc.
+	/// @returns Volume of Hexahedron
    	virtual double getVolume();
+
+	/// Brief desc.
+	/// @returns Center of Hexahedron in X,Y,Z coordinate
 	virtual vector3D getCenterOfGravity();
+
+	/// Brief desc.
+	/// @param volume This describes volume
+	/// @returns Weight of Hexahedron
+	/// @see getVolume()
 	virtual double getWeight(const double &volume);
 };
 
